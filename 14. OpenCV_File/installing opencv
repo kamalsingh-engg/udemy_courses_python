@@ -1,0 +1,89 @@
+Installing OpenCV
+In the next lecture and in Section 17 we will use the OpenCV image processing library. Let us first make sure you have installed the OpenCV library. OpenCV is also referred to as cv2 in Python.
+
+
+
+Install OpenCV:
+1. Open the command line and type:
+
+pip install opencv-python
+
+2. Open a Python session and try:
+
+import cv2
+
+3. If you get no errors, you installed OpenCV successfully. If you get an error, see the FAQs below:
+
+
+
+FAQs
+
+1. My OpenCV installation didn't work on Windows
+
+Solution:
+
+1. Uninstall OpenCV with:
+
+pip uninstall opencv-python
+
+2. Download a wheel (.whl) file from this link and install the file with pip. Make sure you download the correct file for your Windows and your Python versions. For example, for Python 3.6 on Windows 64-bit you would do this:
+
+pip install opencv_python‑3.2.0‑cp36‑cp36m‑win_amd64.whl
+
+3. Try to import cv2 in Python again. If there's still an error, type the following again in the command line:
+
+pip install opencv-python
+4. Try importing cv2 again. It should work at this point.
+
+
+
+2. My OpenCV installation didn't work on Mac
+
+Solution:
+
+If pip install opencv-python didn't work, install OpenCV for Python 2 and use Python 2 to run the programs that contains cv2 code. Because Python 2 is installed by default on Mac, you don't need to install Python 2.
+
+Here are the steps to correctly install OpenCV:
+
+1. Install brew.
+
+To install brew, open your terminal and execute the following:
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+2. OpenCV depends on GTK+, so install that dependency first with brew (always from the terminal):
+
+brew install gtk+
+
+3. Install OpenCV with brew:
+
+brew install opencv
+
+4. Open Python 2 by typing:
+
+python
+
+5. Import cv2 in Python:
+
+import cv2
+
+If you get no errors, you installed OpenCV successfully.
+
+
+
+3. My OpenCV installation didn't work on Linux
+
+1. Open your terminal and execute the following commands one by one:
+
+sudo apt-get install libqt4-dev
+cmake -D WITH_QT=ON ..
+make
+sudo make install
+2. 2. If the above commands don't work, execute this:
+
+sudo apt-get install libopencv-*
+3. Then, install OpenCV with pip:
+
+pip install opencv-python
+
+4. Import cv2 in Python. If you get no errors, you installed OpenCV successfully.
